@@ -1,10 +1,11 @@
 import React from "react";
+import img from '/src/assets/cyberpunk.jpg'
 
 const Heading = () => {
   return (
     <div
       className="relative bg-cover bg-center min-h-screen"
-      style={{ backgroundImage: "url('../src/assets/cyberpunk.jpg')" }}
+      style={{ backgroundImage: `url(${img})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="container mx-auto px-6 py-24 relative z-10 text-center flex flex-col items-center justify-center h-full">

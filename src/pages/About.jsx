@@ -1,4 +1,5 @@
 import React from "react";
+import img from "/src/assets/me.png";
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="flex flex-wrap bg-black " id="about">
         <div className="w-full md:w-1/2">
           <img
-            src="src/assets/me.png"
+            src={img}
             alt="About"
             className="w-full h-auto object-cover"
           />

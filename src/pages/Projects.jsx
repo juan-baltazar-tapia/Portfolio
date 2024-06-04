@@ -2,6 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img1 from "/src/assets/Flavor-Fusion2.png";
+import img2 from "/src/assets/album-discussion.png";
+import img3 from "/src/assets/digg2.png";
 
 const Projects = () => {
   const settings = {
@@ -20,7 +23,7 @@ const Projects = () => {
           <h1 className="text-4xl font-bold mb-8 text-center">
             Explore my most recent full stack projects
           </h1>
-          <Slider {...settings} >
+          <Slider {...settings}>
             {data.map((data) => {
               return (
                 <div key={data.id} className="px-4">
@@ -57,7 +60,7 @@ const Projects = () => {
           </Slider>
         </div>
       </div>
-      <hr  className="border-t border-gray-300 "></hr>
+      <hr className="border-t border-gray-300 "></hr>
     </section>
   );
 };
@@ -66,7 +69,7 @@ const data = [
   {
     id: 1,
     name: "Flavor Fusion Recomendations",
-    image: "../src/assets/Flavor-Fusion2.png",
+    image: img1,
     description:
       "A web application that recommends restuarants and music events based on user preferences, budget, and location. Sign up, and save restuarants recommended to you.",
     github_link: "https://github.com/juan-baltazar-tapia/Flavor-Fusion",
@@ -74,7 +77,7 @@ const data = [
   {
     id: 2,
     name: "Album Discussion Board",
-    image: "../src/assets/album-discussion.png",
+    image: img2,
     description:
       "A dynamic discussion forum that allows users to search for artists and select any album to discuss by leaving comments and upvoting posts.",
     github_link: "https://github.com/juan-baltazar-tapia/Gas-or-Pass",
@@ -82,19 +85,20 @@ const data = [
   {
     id: 3,
     name: "Digg Website Replicate",
-    image: "../src/assets/digg2.png",
+    image: img3,
     description:
       "A digg website replicate developed with four other team members. Worked in a team environment with standup meetings, tickets, and pull request reviews.",
     github_link: "https://github.com/mikewash/tailwind-typescript",
   },
-  {
-    id: 4,
-    name: "Habit Tracker*",
-    image: "",
-    description:
-      "Inspired by github's activity graph, this application allows you to make a habit, track your progress, while allowing you to see a activity graph for every habit.",
-    github_link: "https://github.com/juan-baltazar-tapia/Habit-Tracker",
-  },
+
+  //   {
+  //     id: 4,
+  //     name: "Habit Tracker*",
+  //     image: "",
+  //     description:
+  //       "Inspired by github's activity graph, this application allows you to make a habit, track your progress, while allowing you to see a activity graph for every habit.",
+  //     github_link: "https://github.com/juan-baltazar-tapia/Habit-Tracker",
+  //   },
 ];
 
 export default Projects;
