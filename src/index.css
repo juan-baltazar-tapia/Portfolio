@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-500;
+}
+
+@layer {
+  body {
+    background-color: black;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
