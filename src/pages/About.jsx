@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-wrap bg-black " id="about">
         <div className="w-full md:w-1/2">
           <img
-            src="../src/assets/me.png"
+            src="src/assets/me.png"
             alt="About"
             className="w-full h-auto object-cover"
           />
