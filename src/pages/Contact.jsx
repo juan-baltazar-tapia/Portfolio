@@ -11,19 +11,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     emailjs
       .sendForm("service_ovcvstf", "template_224h7hj", form.current, {
         publicKey: "FIFkV_xpOOK7YTAAh",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          alert("Succesfully Sent")
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          alert(error.text)
         }
       );
-    console.log("Form submitted:", { name, email, message });
+  
     // Reset form fields
     setName("");
     setEmail("");
