@@ -12,19 +12,18 @@ function Home() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    console.log(darkMode)
   };
 
   return (
     <div className={`${darkMode && "dark "}`}>
-      <div>
-        <Navbar toggleDarkMode={toggleDarkMode} />
-        <Heading />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+      <Navbar toggleDarkMode={toggleDarkMode} />
+      <Heading />
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 }

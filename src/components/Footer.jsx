@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
+    <footer className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white py-6">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <a href="https://github.com/juan-baltazar-tapia" target="_blank" rel="noopener noreferrer">

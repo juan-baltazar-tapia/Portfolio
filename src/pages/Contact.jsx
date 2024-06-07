@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white p-8" id="contact">
+    <div className="pt-20 bg-gray-300 dark:bg-gray-900 text-black dark:text-white p-8" id="contact">
       <div className="grid grid-cols-2 mb-20">
         <div className="">
           <h2 className=" ml-7 mr-2 text-5xl font-bold mb-6">
@@ -54,7 +54,7 @@ const Contact = () => {
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
               />
             </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full bg-gray-100 dark:bg-gray-800  border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 required
               />
             </div>
@@ -81,7 +81,7 @@ const Contact = () => {
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full bg-gray-100 dark:bg-gray-800  border border-gray-700 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 rows="4"
                 required
               ></textarea>
@@ -95,7 +95,7 @@ const Contact = () => {
               </button>
               <a
                 href="juan.baltazartapia@gmail.com"
-                className="ml-4 text-blue-400 hover:text-blue-500"
+                className="ml-4 text-blue-600 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500"
               >
                 juan.baltazartapia@gmail.com
               </a>

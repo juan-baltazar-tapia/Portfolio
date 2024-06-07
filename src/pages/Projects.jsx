@@ -9,7 +9,7 @@ import img3 from "/src/assets/digg2.png";
 const Projects = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -17,18 +17,20 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <div className="bg-gray-900 text-white py-12">
+      <div className="bg-gray-300 dark:bg-gray-900 text-white py-12">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold mb-2 text-center">Projects</h3>
-          <h1 className="text-4xl font-bold mb-8 text-center">
+          <h3 className="text-3xl font-bold mb-2 text-center text-black dark:text-white">
+            Projects
+          </h3>
+          <h1 className="text-4xl font-bold mb-8 text-center text-black dark:text-white">
             Explore my most recent full stack projects
           </h1>
           <Slider {...settings}>
             {data.map((data) => {
               return (
                 <div key={data.id} className="px-4">
-                  <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-102 cursor-pointer">
-                    <div className="h-56 flex justify-center items-center bg-indigo-900">
+                  <div className="bg-slate-100 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-102 cursor-pointer">
+                    <div className="h-56 flex justify-center items-center bg-indigo-800 dark:bg-indigo-900">
                       <img
                         src={data.image}
                         alt={data.name}
@@ -36,10 +38,10 @@ const Projects = () => {
                       />
                     </div>
                     <div className="flex-grow flex flex-col p-6">
-                      <h1 className="text-2xl font-bold mb-2 text-center">
+                      <h1 className="text-2xl font-bold mb-2 text-center text-black dark:text-white">
                         {data.name}
                       </h1>
-                      <p className="text-gray-400 mb-4 flex-grow text-center">
+                      <p className=" mb-4 flex-grow text-center text-gray-800 dark:text-gray-400">
                         {data.description}
                       </p>
                       <div className="mt-auto text-center">
@@ -60,7 +62,7 @@ const Projects = () => {
           </Slider>
         </div>
       </div>
-      <hr className="border-t border-gray-300 "></hr>
+      <hr className="border-t border-gray-800 dark:border-gray-300 "></hr>
     </section>
   );
 };
