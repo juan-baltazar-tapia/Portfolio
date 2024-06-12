@@ -40,13 +40,13 @@ const Skills = () => {
     <>
       <section
         id="skills"
-        className="py-20 bg-slate-200 text-black dark:text-white dark:bg-gray-900"
+        className="py-20 md:py-44 bg-slate-200 text-black dark:text-white dark:bg-gray-900"
       >
         <div className="container mx-auto mb-20 ">
-          <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
-          <div className="space-y-8">
-            <h3 className="text-xl font-semibold mb-4">Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center">Skills</h2>
+          <div className="space-y-4 sm:space-y-8">
+            <h3 className=" ml-8 text-xl md:text-3xl lg:text-4xl ont-semibold mb-4">Languages</h3>
+            <div className="mx-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {skills.Languages.map((skill, index) => {
                 return (
                   <ReactCardFlip
@@ -73,7 +73,7 @@ const Skills = () => {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-medium">{skill.name}</h3>
+                        <h3 className="text-lg font-medium lg:text-2xl">{skill.name}</h3>
                       </div>
                     </div>
 
@@ -96,7 +96,7 @@ const Skills = () => {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-lg font-medium">
+                        <h3 className="text-lg font-medium lg:text-2xl">
                           {skill.experience} y.o.e
                         </h3>
                       </div>
@@ -107,10 +107,10 @@ const Skills = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="ml-8 text-xl md:text-3xl lg:text-4xl ont-semibold mb-4">
                 Databases/Frameworks
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="mx-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {skills.FrameworksDatabases.map((skill, index) => {
                   return (
                     <ReactCardFlip
@@ -137,7 +137,7 @@ const Skills = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-lg font-medium">{skill.name}</h3>
+                          <h3 className="text-lg font-medium lg:text-2xl">{skill.name}</h3>
                         </div>
                       </div>
 
@@ -160,7 +160,7 @@ const Skills = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-lg font-medium">
+                          <h3 className="text-lg font-medium lg:text-2xl">
                             {skill.experience} y.o.e
                           </h3>
                         </div>
@@ -172,8 +172,8 @@ const Skills = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4">Tools</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <h3 className="ml-8 text-xl md:text-3xl lg:text-4xl ont-semibold mb-4">Tools</h3>
+              <div className="mx-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {skills.Tools.map((skill, index) => {
                   return (
                     <ReactCardFlip
@@ -200,7 +200,7 @@ const Skills = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-lg font-medium">{skill.name}</h3>
+                          <h3 className="text-lg font-medium lg:text-2xl">{skill.name}</h3>
                         </div>
                       </div>
 
@@ -223,7 +223,7 @@ const Skills = () => {
                           </svg>
                         </div>
                         <div>
-                          <h3 className="text-lg font-medium">
+                          <h3 className="text-lg font-medium lg:text-2xl">
                             {skill.experience} y.o.e
                           </h3>
                         </div>

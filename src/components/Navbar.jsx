@@ -33,7 +33,7 @@ const Navbar = (props) => {
           </ul>
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <h1 className="text-black dark:text-white text-5xl font-bold">Juan Baltazar</h1>
+          <h1 className="text-black dark:text-white hidden sm:block sm:text-2xl md:text-4xl lg:text-5xl font-bold">Juan Baltazar</h1>
         </div>
         <div>
           <button

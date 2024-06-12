@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,43 +7,64 @@ import img2 from "/src/assets/album-discussion.png";
 import img3 from "/src/assets/digg2.png";
 
 const Projects = () => {
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(1); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2); // Tablet
+      } else {
+        setSlidesToShow(3); // Desktop
+      }
+    };
+
+    handleResize(); // Set initial value
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow,
     slidesToScroll: 1,
   };
 
   return (
     <section id="projects">
-      <div className="bg-gray-300 dark:bg-gray-900 text-white py-12">
+      <div className="bg-gray-300 dark:bg-gray-900 text-white py-12 md:py-44">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold mb-2 text-center text-black dark:text-white">
+          <h1 className="pb-5 text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center text-black dark:text-white">
             Projects
-          </h3>
-          <h1 className="text-4xl font-bold mb-8 text-center text-black dark:text-white">
+          </h1>
+          <h1 className="pb-5 text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-black dark:text-white">
             Explore my most recent full stack projects
           </h1>
           <Slider {...settings}>
             {data.map((data) => {
               return (
-                <div key={data.id} className="px-4">
-                  <div className="bg-slate-100 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-102 cursor-pointer">
-                    <div className="h-56 flex justify-center items-center bg-indigo-800 dark:bg-indigo-900">
+                <div key={data.id} className="px-20 sm:px-4 md:px-4 lg:px-4">
+                  <div className="bg-slate-100 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-102 cursor-pointer">
+                    <div className=" flex justify-center items-center bg-indigo-800 dark:bg-indigo-900">
                       <img
                         src={data.image}
                         alt={data.name}
-                        className="h-44 w-44 object-cover"
+                        className="h-44 w-44 md:h-80 md:w-80 object-cover"
                       />
                     </div>
                     <div className="flex-grow flex flex-col p-6">
-                      <h1 className="text-2xl font-bold mb-2 text-center text-black dark:text-white">
+                      <h1 className="text-2xl md:text-4xl font-bold mb-2 text-center text-black dark:text-white">
                         {data.name}
                       </h1>
-                      <p className=" mb-4 flex-grow text-center text-gray-800 dark:text-gray-400">
-                        {data.description}
-                      </p>
+                      <div className="mb-4 flex-grow overflow-auto">
+                        <p className="text-md md:text-xl text-center text-gray-800 dark:text-gray-400">
+                          {data.description}
+                        </p>
+                      </div>
                       <div className="mt-auto text-center">
                         <button
                           className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"

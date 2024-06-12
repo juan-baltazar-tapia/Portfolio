@@ -32,13 +32,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20 bg-gray-300 dark:bg-gray-900 text-black dark:text-white p-8" id="contact">
-      <div className="grid grid-cols-2 mb-20">
+    <div className="pt-20 md:py-48 bg-gray-300 dark:bg-gray-900 text-black dark:text-white p-8" id="contact">
+      <div className="grid gridi-cols-1 md:grid-cols-2 mb-20">
         <div className="">
-          <h2 className=" ml-7 mr-2 text-5xl font-bold mb-6">
+          <h2 className=" ml-7 mr-2 text-4xl md:text-5xl font-bold mb-6">
             Got an opportunity?
           </h2>
-          <p className=" ml-7 mr-20 text-xl mb-8">
+          <p className=" ml-7 mr-20 text-xl md:text-2xl mb-8">
             Send me a quick email for any software engineering or full stack
             opportunities, I'm eager to continue developing my skills in this rewarding and challenging industry.
           </p>
@@ -46,7 +46,7 @@ const Contact = () => {
         <div>
           <form ref={form} onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block mb-2">
+              <label htmlFor="name" className="block mb-2 lg:text-xl xl:text-2xl">
                 NAME
               </label>
               <input
@@ -60,7 +60,7 @@ const Contact = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="block mb-2">
+              <label htmlFor="email" className="block mb-2 lg:text-xl xl:text-2xl">
                 EMAIL
               </label>
               <input
@@ -74,7 +74,7 @@ const Contact = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="message" className="block mb-2">
+              <label htmlFor="message" className="block mb-2 lg:text-xl xl:text-2xl">
                 MESSAGE
               </label>
               <textarea
@@ -90,13 +90,13 @@ const Contact = () => {
             <div className="flex items-center">
               <button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="bg-blue-600 hover:bg-blue-700 text-white lg:text-xl xl:text-2xl font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 Hit me up
               </button>
               <a
                 href="juan.baltazartapia@gmail.com"
-                className="ml-4 text-blue-600 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500"
+                className="ml-4 lg:text-xl xl:text-2xl text-blue-600 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500"
               >
                 juan.baltazartapia@gmail.com
               </a>
